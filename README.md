@@ -19,7 +19,7 @@ If validation fails, training is skipped and the bad file is moved to `data/fail
 
 ## Demo
 
-📹 **[Watch the walkthrough video](YOUR_GOOGLE_DRIVE_LINK_HERE)**
+📹 **[Watch the walkthrough video](https://drive.google.com/file/d/1-xu0n5MzahMBCnspon6SD2DKb34xxt09/view)**
 
 After running the pipeline on 4 sample CSVs, you get this:
 ```
