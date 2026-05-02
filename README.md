@@ -19,8 +19,9 @@ If validation fails, training is skipped and the bad file is moved to `data/fail
 
 ## Demo
 
-After running the pipeline on 4 sample CSVs, you get this:
+📹 **[Watch the walkthrough video](YOUR_GOOGLE_DRIVE_LINK_HERE)**
 
+After running the pipeline on 4 sample CSVs, you get this:
 ```
 PIPELINE RUN SUMMARY
 ======================================================================
