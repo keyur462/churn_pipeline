@@ -1,0 +1,76 @@
+2026-05-02 06:36:01 | INFO    | ingest       | Found 4 raw file(s) in D:\Master\churn_pipeline\data\raw
+2026-05-02 06:36:01 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:01 | INFO    | pipeline     | Processing: user_activity_2024_01_15.csv
+2026-05-02 06:36:01 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:01 | INFO    | ingest       | Loading user_activity_2024_01_15.csv
+2026-05-02 06:36:01 | INFO    | ingest       | Loaded user_activity_2024_01_15.csv: 500 rows, 9 columns
+2026-05-02 06:36:01 | INFO    | clean        | Cleaning done: 500 -> 500 rows (dropped 0 dupes, 0 out-of-range, 0 bad-category)
+2026-05-02 06:36:02 | INFO    | validate     | Validation PASSED (500 rows, 0 warnings)
+2026-05-02 06:36:02 | INFO    | pipeline     | Processed data saved to D:\Master\churn_pipeline\data\processed\user_activity_2024_01_15.parquet
+2026-05-02 06:36:02 | INFO    | pipeline     | Validation passed. Triggering training for user_activity_2024_01_15.csv.
+2026-05-02 06:36:02 | INFO    | train        | Training on 500 rows from user_activity_2024_01_15.csv
+2026-05-02 06:36:02 | INFO    | train        | Test accuracy: 0.980
+2026-05-02 06:36:02 | INFO    | train        | 
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99        95
+           1       1.00      0.60      0.75         5
+
+    accuracy                           0.98       100
+   macro avg       0.99      0.80      0.87       100
+weighted avg       0.98      0.98      0.98       100
+
+2026-05-02 06:36:02 | INFO    | train        | Model saved to D:\Master\churn_pipeline\models\churn_model_20260502_063602_452713.joblib
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | pipeline     | Processing: user_activity_2024_01_16.csv
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | ingest       | Loading user_activity_2024_01_16.csv
+2026-05-02 06:36:02 | INFO    | ingest       | Loaded user_activity_2024_01_16.csv: 500 rows, 8 columns
+2026-05-02 06:36:02 | INFO    | clean        | Cleaning done: 500 -> 500 rows (dropped 0 dupes, 0 out-of-range, 0 bad-category)
+2026-05-02 06:36:02 | ERROR   | validate     | VALIDATION FAIL: Missing required columns: ['churned']
+2026-05-02 06:36:02 | ERROR   | pipeline     | Training BLOCKED for user_activity_2024_01_16.csv. Moving to D:\Master\churn_pipeline\data\failed.
+2026-05-02 06:36:02 | INFO    | pipeline     | Quarantined: D:\Master\churn_pipeline\data\failed\validation_failed__user_activity_2024_01_16.csv
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | pipeline     | Processing: user_activity_2024_01_17.csv
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | ingest       | Loading user_activity_2024_01_17.csv
+2026-05-02 06:36:02 | INFO    | ingest       | Loaded user_activity_2024_01_17.csv: 500 rows, 9 columns
+2026-05-02 06:36:02 | INFO    | clean        | Cleaning done: 500 -> 500 rows (dropped 0 dupes, 0 out-of-range, 0 bad-category)
+2026-05-02 06:36:02 | ERROR   | validate     | VALIDATION FAIL: Column 'avg_session_minutes' is 30% null (threshold: 10%)
+2026-05-02 06:36:02 | ERROR   | validate     | VALIDATION FAIL: Column 'monthly_spend' is 30% null (threshold: 10%)
+2026-05-02 06:36:02 | ERROR   | validate     | VALIDATION FAIL: Column 'support_tickets' is 30% null (threshold: 10%)
+2026-05-02 06:36:02 | ERROR   | validate     | Validation FAILED with 3 error(s)
+2026-05-02 06:36:02 | ERROR   | pipeline     | Training BLOCKED for user_activity_2024_01_17.csv. Moving to D:\Master\churn_pipeline\data\failed.
+2026-05-02 06:36:02 | INFO    | pipeline     | Quarantined: D:\Master\churn_pipeline\data\failed\validation_failed__user_activity_2024_01_17.csv
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | pipeline     | Processing: user_activity_2024_01_18.csv
+2026-05-02 06:36:02 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:02 | INFO    | ingest       | Loading user_activity_2024_01_18.csv
+2026-05-02 06:36:02 | INFO    | ingest       | Loaded user_activity_2024_01_18.csv: 500 rows, 9 columns
+2026-05-02 06:36:02 | INFO    | clean        | Cleaning done: 500 -> 460 rows (dropped 0 dupes, 20 out-of-range, 20 bad-category)
+2026-05-02 06:36:02 | WARNING | validate     | VALIDATION WARN: Cleaning dropped 8% of rows
+2026-05-02 06:36:02 | INFO    | validate     | Validation PASSED (460 rows, 1 warnings)
+2026-05-02 06:36:02 | INFO    | pipeline     | Processed data saved to D:\Master\churn_pipeline\data\processed\user_activity_2024_01_18.parquet
+2026-05-02 06:36:02 | INFO    | pipeline     | Validation passed. Triggering training for user_activity_2024_01_18.csv.
+2026-05-02 06:36:02 | INFO    | train        | Training on 460 rows from user_activity_2024_01_18.csv
+2026-05-02 06:36:03 | INFO    | train        | Test accuracy: 0.967
+2026-05-02 06:36:03 | INFO    | train        | 
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98        88
+           1       1.00      0.25      0.40         4
+
+    accuracy                           0.97        92
+   macro avg       0.98      0.62      0.69        92
+weighted avg       0.97      0.97      0.96        92
+
+2026-05-02 06:36:03 | INFO    | train        | Model saved to D:\Master\churn_pipeline\models\churn_model_20260502_063603_015899.joblib
+2026-05-02 06:36:03 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:03 | INFO    | pipeline     | PIPELINE RUN SUMMARY
+2026-05-02 06:36:03 | INFO    | pipeline     | ======================================================================
+2026-05-02 06:36:03 | INFO    | pipeline     |   TRAINED   user_activity_2024_01_15.csv  (accuracy=0.980)
+2026-05-02 06:36:03 | INFO    | pipeline     |   BLOCKED   user_activity_2024_01_16.csv  errors=1
+2026-05-02 06:36:03 | INFO    | pipeline     |   BLOCKED   user_activity_2024_01_17.csv  errors=3
+2026-05-02 06:36:03 | INFO    | pipeline     |   TRAINED   user_activity_2024_01_18.csv  (accuracy=0.967)
+2026-05-02 06:36:03 | INFO    | pipeline     | 
+2/4 files triggered training.
